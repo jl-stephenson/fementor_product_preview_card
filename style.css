@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --gray-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --dark-aqua: #1a4032;
+
+  /* fonts */
+  --main: "Montserrat", sans-serif;
+  --heading: "Fraunces", serif;
+
+  /* font-weight */
+  --medium: 500;
+  --bold: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  background-color: var(--white);
+  max-width: 21.4375rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15rem 1fr;
+  border-radius: 1rem;
+}
+
+.card-container img {
+  max-height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.content-container {
+  padding: 2rem;
+}
+
+.content-container > h4 {
+  font-family: var(--main);
+  font-weight: var(--medium);
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: var(--gray-blue);
+}
+
+.content-container > h2,
+.price-box > h4 {
+  font-family: var(--heading);
+  font-weight: var(--bold);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.content-container > h2 {
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+}
+
+.content-container > p {
+  font-family: var(--main);
+  font-weight: var(--medium);
+  font-size: 0.875rem;
+  line-height: 1.64;
+  color: var(--gray-blue);
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 1.1875rem;
+}
+
+.price-box > h4 {
+  color: var(--dark-cyan);
+}
+
+.price-box > p {
+  font-family: var(--main);
+  font-weight: var(--medium);
+  font-size: 0.8125rem;
+  line-height: 1.769rem;
+  text-decoration: line-through;
+  color: var(--gray-blue);
+}
+
+.content-container button::before {
+  content: url(images/icon-cart.svg);
+}
+
+.content-container button {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-family: var(--main);
+  font-weight: var(--bold);
+  font-size: 0.875rem;
+  border: 0;
+  margin-top: 1.25rem;
+  padding: 1.0625rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.726rem;
+  transition-duration: 1s;
+}
+
+.content-container button:hover {
+  cursor: pointer;
+  background-color: var(--dark-aqua);
+}
