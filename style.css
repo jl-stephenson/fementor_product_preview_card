@@ -167,8 +167,13 @@ body {
   .content-container > h2 {
     margin-bottom: 1.5rem;
   }
-  
+
+  .content-container > .description {
+    margin-bottom: 1.8rem;
+  }
+
   .card-container button {
     margin-top: 1.875rem;
   }
+
 }
