@@ -11,7 +11,7 @@
   --dark-blue: hsl(212, 21%, 14%);
   --gray-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
-  --dark-aqua: #1a4032;
+  --dark-aqua: hsl(157, 43%, 18%, 100%);
 
   /* fonts */
   --main: "Montserrat", sans-serif;
@@ -33,6 +33,16 @@ p {
   padding: 0;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -52,7 +62,7 @@ body {
   border-radius: 1rem;
 }
 
-.card-container img {
+.card-container picture img {
   max-height: 15rem;
   border-radius: 1rem 1rem 0 0;
 }
@@ -61,7 +71,7 @@ body {
   padding: 2rem;
 }
 
-.content-container > h4 {
+.content-container > .ribbon-text {
   font-family: var(--main);
   font-weight: var(--medium);
   font-size: 0.75rem;
@@ -72,7 +82,7 @@ body {
 }
 
 .content-container > h2,
-.price-box > h4 {
+.price-box > p {
   font-family: var(--heading);
   font-weight: var(--bold);
   font-size: 2rem;
@@ -84,7 +94,7 @@ body {
   color: var(--dark-blue);
 }
 
-.content-container > p {
+.content-container > .description {
   font-family: var(--main);
   font-weight: var(--medium);
   font-size: 0.875rem;
@@ -100,21 +110,16 @@ body {
   gap: 1.1875rem;
 }
 
-.price-box > h4 {
+.price-box > p {
   color: var(--dark-cyan);
 }
 
-.price-box > p {
+.price-box > s {
   font-family: var(--main);
   font-weight: var(--medium);
   font-size: 0.8125rem;
   line-height: 1.769rem;
-  text-decoration: line-through;
   color: var(--gray-blue);
-}
-
-.content-container button::before {
-  content: url(images/icon-cart.svg);
 }
 
 .content-container button {
@@ -135,7 +140,23 @@ body {
   transition-duration: 1s;
 }
 
+.content-container button:focus,
 .content-container button:hover {
   cursor: pointer;
   background-color: var(--dark-aqua);
+}
+
+@media only screen and (min-width: 601px) {
+  .card-container {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  min-width: 37.5rem;
+  }
+
+  .card-container picture img {
+    min-width: 18.75rem;
+    min-height: 100%; 
+    object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
+  }
 }
