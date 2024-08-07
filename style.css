@@ -34,12 +34,12 @@ p {
 }
 
 .visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 
@@ -148,15 +148,27 @@ body {
 
 @media only screen and (min-width: 601px) {
   .card-container {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  min-width: 37.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-width: 37.5rem;
   }
 
   .card-container picture img {
     min-width: 18.75rem;
-    min-height: 100%; 
+    min-height: 100%;
     object-fit: cover;
     border-radius: 1rem 0 0 1rem;
+  }
+
+  .content-container > .ribbon-text {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-container > h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-container button {
+    margin-top: 1.875rem;
   }
 }
