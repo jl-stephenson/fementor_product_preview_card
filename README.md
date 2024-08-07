@@ -59,6 +59,6 @@ In future projects I would like to explore CSS methodologies around organising c
 
 ### Useful resources
 
-- [FED Mentor - Planning your HTML](https://fedmentor.dev/posts/html-plan-product-preview/) - This is a guide to the same build with best-practices for HTML. Having finished a version of the project, this was invaluable in
+- [FED Mentor - Planning your HTML](https://fedmentor.dev/posts/html-plan-product-preview/) - This is a guide to the same build with best-practices for HTML. Having finished a version of the project, this was an invaluable guide to improving semantic HTML and accessibility. I didn't implement every suggestion but following Grace's advice greatly improved the project.
 - [Scott O'Hara - Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually) - This is a great guide to including hidden elements that are still available to screen-readers.
 
