@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of project in browser](images/screenshot.jpg)
+![Screenshot of project in browser](images/screenshot.png)
 
 ### Links
 
